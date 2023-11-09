@@ -1,0 +1,11 @@
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\bin\Debug\TelaCasdastroFuncionario.exe.config
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\bin\Debug\TelaCasdastroFuncionario.exe
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\bin\Debug\TelaCasdastroFuncionario.pdb
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.csproj.AssemblyReference.cache
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.csproj.SuggestedBindingRedirects.cache
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.Form1.resources
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.Properties.Resources.resources
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.csproj.GenerateResource.cache
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.csproj.CoreCompileInputs.cache
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.exe
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.pdb
