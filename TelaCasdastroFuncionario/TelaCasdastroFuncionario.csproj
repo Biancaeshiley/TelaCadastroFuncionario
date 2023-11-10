@@ -55,7 +55,19 @@
     <Compile Include="Funcionario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValidacaoCPF.cs" />
+    <Compile Include="TelaListaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaListaCadastro.Designer.cs">
+      <DependentUpon>TelaListaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaListaCadastroFun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaListaCadastroFun.Designer.cs">
+      <DependentUpon>TelaListaCadastroFun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validacoes.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +81,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TelaListaCadastro.resx">
+      <DependentUpon>TelaListaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Frame 1 %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rectangle 1 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class ValidacaoCPF
+public class Validacoes
 {
     public static bool ValidaCPF(string CPF)
     {
@@ -48,4 +48,19 @@ public class ValidacaoCPF
         else { return false; }
         
     }
+
+  
+        public static bool ValidaEmail(string tx_email)
+        {
+            string MdEmal = "^([0-9a-zA-Z]([-.\\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\\w]*[0-9a-zA-Z]\\.)+[a-zA-Z]{2,9})$";
+            if (System.Text.RegularExpressions.Regex.IsMatch(tx_email, MdEmal))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    
 }

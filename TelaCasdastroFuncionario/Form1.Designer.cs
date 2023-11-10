@@ -47,6 +47,9 @@
             this.fechar = new System.Windows.Forms.Button();
             this.tx_rg = new System.Windows.Forms.TextBox();
             this.tx_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.menu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tx_id
@@ -91,7 +94,7 @@
             // tx_estado
             // 
             this.tx_estado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tx_estado.Location = new System.Drawing.Point(221, 240);
+            this.tx_estado.Location = new System.Drawing.Point(216, 240);
             this.tx_estado.Name = "tx_estado";
             this.tx_estado.Size = new System.Drawing.Size(127, 13);
             this.tx_estado.TabIndex = 7;
@@ -99,10 +102,11 @@
             // tx_salario
             // 
             this.tx_salario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tx_salario.Location = new System.Drawing.Point(221, 293);
+            this.tx_salario.Location = new System.Drawing.Point(235, 293);
             this.tx_salario.Name = "tx_salario";
-            this.tx_salario.Size = new System.Drawing.Size(127, 13);
+            this.tx_salario.Size = new System.Drawing.Size(108, 13);
             this.tx_salario.TabIndex = 9;
+            this.tx_salario.TextChanged += new System.EventHandler(this.tx_salario_TextChanged);
             this.tx_salario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tx_salario_KeyPress);
             // 
             // tx_dtnas
@@ -195,9 +199,10 @@
             // tx_rg
             // 
             this.tx_rg.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tx_rg.Location = new System.Drawing.Point(221, 145);
+            this.tx_rg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tx_rg.Location = new System.Drawing.Point(216, 145);
             this.tx_rg.Name = "tx_rg";
-            this.tx_rg.Size = new System.Drawing.Size(117, 13);
+            this.tx_rg.Size = new System.Drawing.Size(120, 13);
             this.tx_rg.TabIndex = 19;
             this.tx_rg.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.tx_rg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tx_rg_KeyPress_1);
@@ -213,6 +218,37 @@
             this.tx_telefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.tx_telefone_MaskInputRejected);
             this.tx_telefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tx_telefone_KeyPress_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(213, 293);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "R$";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(218, 145);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 13);
+            this.textBox1.TabIndex = 19;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tx_rg_KeyPress_1);
+            // 
+            // menu
+            // 
+            this.menu.Location = new System.Drawing.Point(2, 1);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(34, 23);
+            this.menu.TabIndex = 22;
+            this.menu.UseVisualStyleBackColor = true;
+            this.menu.Click += new System.EventHandler(this.menu_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,7 +256,10 @@
             this.BackgroundImage = global::TelaCasdastroFuncionario.Properties.Resources.Frame_1__11_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(750, 323);
+            this.Controls.Add(this.menu);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.tx_telefone);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tx_rg);
             this.Controls.Add(this.fechar);
             this.Controls.Add(this.tx_cpf);
@@ -265,6 +304,9 @@
         private System.Windows.Forms.Button fechar;
         private System.Windows.Forms.TextBox tx_rg;
         private System.Windows.Forms.MaskedTextBox tx_telefone;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button menu;
     }
 }
 

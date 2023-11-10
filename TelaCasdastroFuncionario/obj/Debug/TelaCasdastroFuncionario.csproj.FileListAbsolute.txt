@@ -9,3 +9,4 @@ C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncio
 C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.csproj.CoreCompileInputs.cache
 C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.exe
 C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.pdb
+C:\Users\2022102020061\source\repos\TelaCasdastroFuncionario\TelaCasdastroFuncionario\obj\Debug\TelaCasdastroFuncionario.TelaListaCadastro.resources

@@ -33,6 +33,12 @@ namespace TelaCasdastroFuncionario
             fechar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             fechar.BackColor = Color.Transparent;
 
+            menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            menu.FlatAppearance.BorderSize = 0;
+            menu.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            menu.BackColor = Color.Transparent;
+
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -88,8 +94,29 @@ namespace TelaCasdastroFuncionario
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            ValidacaoCPF.ValidaCPF(tx_cpf.Text);
-            MessageBox.Show(ValidacaoCPF.ValidaCPF(tx_cpf.Text).ToString());
+
+            Funcionario f = new Funcionario();
+            string id = tx_id.Text;
+            string nome = tx_nome.Text;
+            string cpf = tx_cpf.Text;
+            string endereco = tx_endereco.Text;
+            string cidade = tx_cidade.Text;
+            string estado = tx_estado.Text;
+            DateTime datnascimento = Convert.ToDateTime(tx_dtnas.Text);
+            double salario = Convert.ToDouble(tx_salario.Text);
+            string telefone = tx_telefone.Text;
+            string funcao = tx_funcao.Text;
+            string estcivil = tx_estcivil.Text;
+
+
+            Validacoes.ValidaCPF(tx_cpf.Text);
+            MessageBox.Show(Validacoes.ValidaCPF(tx_cpf.Text).ToString());
+
+            Validacoes.ValidaEmail(tx_email.Text);
+            MessageBox.Show(Validacoes.ValidaEmail(tx_email.Text).ToString());
+
+
+            MessageBox.Show("Funcionário cadastrado com sucesso!!");
 
         }
 
@@ -152,6 +179,21 @@ namespace TelaCasdastroFuncionario
         }
 
         private void tx_telefone_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void tx_salario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menu_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
