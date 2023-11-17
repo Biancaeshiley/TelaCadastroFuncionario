@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TelaCasdastroFuncionario.Configuracoes;
 
 namespace TelaCasdastroFuncionario
 {
@@ -15,6 +16,9 @@ namespace TelaCasdastroFuncionario
         public Form1()
         {
             InitializeComponent();
+            Inserir();
+            Consultar();
+
             excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
             excluir.FlatAppearance.BorderSize = 0;
             excluir.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -39,6 +43,59 @@ namespace TelaCasdastroFuncionario
             menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
             menu.BackColor = Color.Transparent;
 
+        }
+
+        void Inserir()
+        {
+            var nomeFun = "Bianca Eshiley Abreu Torres";
+            var cpfFun = "040.124.122-05";
+
+            try
+            {
+                ConexoeBD conexoe = new ConexoeBD();
+
+                var comando = conexoe.Comando("INSERT INTO funcionario (nome_fun, cpf_fun) VALUES (@nome, @cpf)");
+
+                comando.Parameters.AddWithValue("@nome", nomeFun);
+                comando.Parameters.AddWithValue("@cpf", cpfFun);
+
+                var resultado = comando.ExecuteNonQuery();
+
+                if(resultado > 0)
+                {
+                    MessageBox.Show("Funcionário cadastro com sucesso");
+                }
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);            
+            }
+
+        }
+
+        void Consultar()
+        {
+            try
+            {
+                var ConexoeBD = new ConexoeBD();
+
+                var comando = ConexoeBD.Comando("SELECT * FROM Funcionario");
+
+                var leitor = comando.ExecuteReader();
+
+                string resultado = null;
+
+                while (leitor.Read())
+                {
+                    resultado += "\n" + leitor.GetString("nome_fun");
+                }
+
+                MessageBox.Show(resultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -114,10 +171,6 @@ namespace TelaCasdastroFuncionario
 
             Validacoes.ValidaEmail(tx_email.Text);
             MessageBox.Show(Validacoes.ValidaEmail(tx_email.Text).ToString());
-
-
-            MessageBox.Show("Funcionário cadastrado com sucesso!!");
-
         }
 
         private void button1_Click_2(object sender, EventArgs e)
