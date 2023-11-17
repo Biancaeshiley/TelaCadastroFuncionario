@@ -16,7 +16,6 @@ namespace TelaCasdastroFuncionario
         public Form1()
         {
             InitializeComponent();
-            Inserir();
             Consultar();
 
             excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat; 
@@ -37,19 +36,20 @@ namespace TelaCasdastroFuncionario
             fechar.FlatAppearance.MouseOverBackColor = Color.Transparent;
             fechar.BackColor = Color.Transparent;
 
-            menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            menu.FlatAppearance.BorderSize = 0;
-            menu.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            menu.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            menu.BackColor = Color.Transparent;
-
         }
 
-        void Inserir()
+        void Inserir(Funcionario fun)
         {
             var nomeFun = "Bianca Eshiley Abreu Torres";
+            var datanascFun = "30/07/2007";
             var cpfFun = "040.124.122-05";
-
+            var rgFun = "1235678";
+            var telefoneFun = "(69)99393-5418";
+            var emailFun = "Eshileybianca4@gmail.com";
+            var estadocivilFun = "Solteiro(a)";
+            var funcaoFun = "Estágiaria";
+            var salarioFun = "500";
+            
             try
             {
                 ConexoeBD conexoe = new ConexoeBD();
@@ -65,6 +65,8 @@ namespace TelaCasdastroFuncionario
                 {
                     MessageBox.Show("Funcionário cadastro com sucesso");
                 }
+                LimparTextBoxs();
+                Consultar();
             }
             catch (Exception ex) 
             {
@@ -96,6 +98,34 @@ namespace TelaCasdastroFuncionario
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void LimparTextBoxs()
+        {
+            foreach(Control control in this.Controls)
+            {
+                if(control is TextBox)
+                {
+                    control.Text = String.Empty;
+                }
+            }
+        }
+
+        private bool ExistemTextBoxsVazio()
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is TextBox || control is MaskedTextBox)
+                {
+                    var text = control.Text.Replace(",", " ").Replace("-", "").Trim();
+
+                    if(text == "")
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -154,23 +184,34 @@ namespace TelaCasdastroFuncionario
 
             Funcionario f = new Funcionario();
             string id = tx_id.Text;
-            string nome = tx_nome.Text;
-            string cpf = tx_cpf.Text;
-            string endereco = tx_endereco.Text;
-            string cidade = tx_cidade.Text;
-            string estado = tx_estado.Text;
-            DateTime datnascimento = Convert.ToDateTime(tx_dtnas.Text);
-            double salario = Convert.ToDouble(tx_salario.Text);
-            string telefone = tx_telefone.Text;
-            string funcao = tx_funcao.Text;
-            string estcivil = tx_estcivil.Text;
+            f.Nome = tx_nome.Text;
+            f.Cpf = tx_cpf.Text;
+            f.Endereco = tx_endereco.Text;
+            f.Cidade = tx_cidade.Text;
+            f.Estado = tx_estado.Text;
+            f.Datnascimento = Convert.ToDateTime(tx_dtnas.Text);
+            f.Salario = Convert.ToDouble(tx_salario.Text);
+            f.Telefone = tx_telefone.Text;
+            f.Funcao = tx_funcao.Text;
+            f.EstCivil = tx_estcivil.Text;
 
 
-            Validacoes.ValidaCPF(tx_cpf.Text);
+            if (ExistemTextBoxsVazio())
+            {
+                MessageBox.Show("Todos os campos são obrigatórios. Favor Preencher os campos corretamente.", "Arenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Inserir(f);
+            }
+                
+
+            
+            /*Validacoes.ValidaCPF(tx_cpf.Text);
             MessageBox.Show(Validacoes.ValidaCPF(tx_cpf.Text).ToString());
 
             Validacoes.ValidaEmail(tx_email.Text);
-            MessageBox.Show(Validacoes.ValidaEmail(tx_email.Text).ToString());
+            MessageBox.Show(Validacoes.ValidaEmail(tx_email.Text).ToString());*/
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -247,6 +288,11 @@ namespace TelaCasdastroFuncionario
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

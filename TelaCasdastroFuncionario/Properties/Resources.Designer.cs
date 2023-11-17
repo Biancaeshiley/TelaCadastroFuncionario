@@ -83,6 +83,16 @@ namespace TelaCasdastroFuncionario.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Frame_1__12_ {
+            get {
+                object obj = ResourceManager.GetObject("Frame 1 (12)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frame_1__2_ {
             get {
                 object obj = ResourceManager.GetObject("Frame 1 (2)", resourceCulture);
@@ -166,6 +176,26 @@ namespace TelaCasdastroFuncionario.Properties {
         internal static System.Drawing.Bitmap Rectangle_1__1_ {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_1__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 1 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_1__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 1 (2)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

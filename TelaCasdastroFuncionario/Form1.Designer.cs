@@ -49,7 +49,8 @@
             this.tx_telefone = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.menu = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tx_id
@@ -240,23 +241,23 @@
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tx_rg_KeyPress_1);
             // 
-            // menu
+            // dataGridView1
             // 
-            this.menu.Location = new System.Drawing.Point(2, 1);
-            this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(34, 23);
-            this.menu.TabIndex = 22;
-            this.menu.UseVisualStyleBackColor = true;
-            this.menu.Click += new System.EventHandler(this.menu_Click);
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 345);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(673, 217);
+            this.dataGridView1.TabIndex = 23;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::TelaCasdastroFuncionario.Properties.Resources.Frame_1__11_;
+            this.BackgroundImage = global::TelaCasdastroFuncionario.Properties.Resources.Frame_1__12_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(750, 323);
-            this.Controls.Add(this.menu);
+            this.ClientSize = new System.Drawing.Size(750, 585);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tx_telefone);
             this.Controls.Add(this.textBox1);
@@ -280,6 +281,7 @@
             this.Name = "Form1";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,7 +308,7 @@
         private System.Windows.Forms.MaskedTextBox tx_telefone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button menu;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
